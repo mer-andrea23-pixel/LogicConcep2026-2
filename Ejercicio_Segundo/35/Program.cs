@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Shared;
 
-namespace FactorPrimo
+namespace PrimeFactors
 {
     class Program
     {
@@ -11,18 +11,18 @@ namespace FactorPrimo
         {
             int num = ConsoleExtensions.GetInt("Ingrese el nùmero a descomponer:");
             
-            List<int> factores = GetFactors(num);
-            Console.WriteLine($"{num}: {string.Join(" x ", factores)}");
+            List<int> factors = GetFactors(num);
+            Console.WriteLine($"{num}: {string.Join(" x ", factors)}");
 
         }
 
         static List<int> GetFactors(int num)
         {
-            List<int> factores = new List<int>();
+            List<int> factors = new List<int>();
 
             while (num % 2 == 0)
             {
-                factores.Add(2);
+                factors.Add(2);
                 num /= 2;
             }
 
@@ -30,17 +30,17 @@ namespace FactorPrimo
             {
                 while(num % divisor == 0)
                 {
-                    factores.Add(divisor);
+                    factors.Add(divisor);
                     num /= divisor;
                 }
             }
 
             if (num > 1)
             {
-                factores.Add(num);
+                factors.Add(num);
             }
 
-            return factores;
+            return factors;
         }
     }
 }

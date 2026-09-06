@@ -4,7 +4,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Shared;
 
-namespace Matriz
+namespace Matrix
 {
     class Program
     {
@@ -13,9 +13,9 @@ namespace Matriz
             int num = ConsoleExtensions.GetInt("Ingrese el orden de la matriz: ");
 
             int[,] matriz = new int[num, num];
-            int suma = 0;
-            int mayor = matriz[0, 0];
-            int menor = matriz[0, 0];
+            int addition = 0;
+            int max = matriz[0, 0];
+            int min = matriz[0, 0];
 
             for(int i = 0; i < num; i++)
             {
@@ -23,7 +23,7 @@ namespace Matriz
                 for (int j=0;j < num; j++)
             {
                 matriz[i,j] = (i+1)-j;
-                suma += matriz[i,j];
+                addition += matriz[i,j];
             }
             }
 
@@ -38,7 +38,7 @@ namespace Matriz
             Console.WriteLine();
             }
             
-            Console.WriteLine("La simatoria es: " + suma);
+            Console.WriteLine("La simatoria es: " + addition);
 
               for(int i = 0; i < num; i++)
             {
@@ -46,19 +46,19 @@ namespace Matriz
                 for (int j=0;j < num; j++)
             {
 
-                if(matriz[i,j] > mayor)
+                if(matriz[i,j] > max)
                     {
-                        mayor = matriz[i,j];
+                        max = matriz[i,j];
                     }
-                if(matriz[i,j] < menor)
+                if(matriz[i,j] < min)
                     {
-                        menor = matriz[i,j];
+                        min = matriz[i,j];
                     }
             }
             }
 
-            Console.WriteLine("El màximo es: " + mayor);
-            Console.WriteLine("El menor es: " + menor);
+            Console.WriteLine("El màximo es: " + max);
+            Console.WriteLine("El menor es: " + min);
         }
     }
 }
