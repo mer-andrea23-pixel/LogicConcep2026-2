@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using Shared;
 
 namespace Matriz
 {
@@ -9,8 +10,7 @@ namespace Matriz
     {
         static void Main(string[] args)
         {
-            Console.Write("Ingrese el orden de la matriz:");
-            int num = Convert.ToInt32(Console.ReadLine());
+            int num = ConsoleExtensions.GetInt("Ingrese el orden de la matriz: ");
 
             int[,] matriz = new int[num, num];
             int suma = 0;
@@ -25,7 +25,6 @@ namespace Matriz
                 matriz[i,j] = (i+1)-j;
                 suma += matriz[i,j];
             }
-            
             }
 
              for(int i = 0; i < num; i++)
