@@ -9,28 +9,38 @@ namespace FactorPrimo
     {
         static void Main(string[] args)
         {
-            Console.Write("Ingrese el nùmero a descomponer:");
-            int num = Convert.ToInt32(Console.ReadLine());
-
+            int num = ConsoleExtensions.GetInt("Ingrese el nùmero a descomponer:");
             
+            List<int> factores = GetFactors(num);
+            Console.WriteLine($"{num}: {string.Join(" x ", factores)}");
 
-            /*List<int> divisors = GetDivisors(num);
-            Console.WriteLine($"{num}: {string.Join(", ", divisors)}");*/
         }
 
-        /*static List<int> GetDivisors(int num)
+        static List<int> GetFactors(int num)
         {
-            List<int> divisors = new List<int>();
+            List<int> factores = new List<int>();
 
-            for (int i = 1; i <= num; i++)
+            while (num % 2 == 0)
             {
-                if (num % i == 0)
+                factores.Add(2);
+                num /= 2;
+            }
+
+            for (int divisor = 3; divisor*divisor <= num; divisor += 2)
+            {
+                while(num % divisor == 0)
                 {
-                    divisors.Add(i);
+                    factores.Add(divisor);
+                    num /= divisor;
                 }
             }
 
-            return divisors;
-        }*/
+            if (num > 1)
+            {
+                factores.Add(num);
+            }
+
+            return factores;
+        }
     }
 }
