@@ -7,9 +7,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "30", "30", "{77E88D2F-0C52-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TallerProgramacion", "01\01\TallerProgramacion.csproj", "{6E1F91B7-F688-4363-BFA8-9B00A570DF70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "30", "30\30.csproj", "{EB37A606-FB31-4F53-A758-C0063378182F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "30", "Ejercicio_Primero\30\30.csproj", "{EB37A606-FB31-4F53-A758-C0063378182F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "35", "35\35.csproj", "{D54AD889-0858-4048-B4D5-F6C4ADD91C10}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "35", "Ejercicio_Segundo\35\35.csproj", "{D54AD889-0858-4048-B4D5-F6C4ADD91C10}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

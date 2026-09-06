@@ -11,6 +11,8 @@ namespace FactorPrimo
             Console.Write("Ingrese el nùmero a descomponer:");
             int num = Convert.ToInt32(Console.ReadLine());
 
+            
+
             /*List<int> divisors = GetDivisors(num);
             Console.WriteLine($"{num}: {string.Join(", ", divisors)}");*/
         }
